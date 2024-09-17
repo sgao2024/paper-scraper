@@ -561,7 +561,7 @@ async def doi_to_bibtex(doi: str, session: ClientSession) -> str:
 class RateLimits(float, Enum):
     """Rate limits (requests/sec) based on API provider."""
 
-    SEMANTIC_SCHOLAR = 90.0
+    SEMANTIC_SCHOLAR = 1.0 # changed from 90.0 to 1.0
     GOOGLE_SCHOLAR = 30.0
     # SEE: https://www.crossref.org/documentation/metadata-plus/#00343
     CROSSREF = 30.0  # noqa: PIE796
