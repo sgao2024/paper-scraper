@@ -32,7 +32,7 @@ class ThrottledClientSession(aiohttp.ClientSession):
     TIME_BASE = MAX_WAIT_FOR_CLOSE - 1  # sec
 
     def __init__(
-        self, rate_limit: float | None = None, retry_count: int = 5, *args, **kwargs
+        self, rate_limit: float | None = None, retry_count: int = 20, *args, **kwargs
     ) -> None:
         """
         Initialize.
